@@ -1,0 +1,23 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+
+\title{Matlab differential equation solver}
+
+\begin{document}
+
+\maketitle
+
+Here is the equation of motion for a mass-spring-damper system, in matrix form:
+
+$\begin{bmatrix} \dot{x} \ \ddot{x} \end{bmatrix} = \begin{bmatrix} 0 & 1 \ -\frac{k}{m} & -\frac{c}{m} \end{bmatrix} \begin{bmatrix} x \ \dot{x} \end{bmatrix}$
+
+Where $x$ is the position of the car, $\dot{x}$ is the velocity, $\ddot{x}$ is the acceleration, $k$ is the spring constant, $c$ is the damping constant and $m$ is the mass of the car.
+
+This equation can be written in vector form as $\frac{dX}{dt} = A*X$, where X is the state vector $[x,\dot{x}]^T$ and A is the system matrix.
+
+In the Matlab code that I provided earlier, this system matrix is represented by the matrix A = [0 1; -(k/m) -(c/m)]. And the function myODE calculates the derivatives of the state vector X and returns the value of the derivative by multiplying A and X as shown in the equation above.
+
+
+
+
+\end{document}
